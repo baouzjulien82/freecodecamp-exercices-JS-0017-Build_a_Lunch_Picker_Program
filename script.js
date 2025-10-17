@@ -1,3 +1,5 @@
+
+
 const lunches = [];
 // ajouter un lunch à la fin du tableau
 const addLunchToEnd = (array, string) => {
@@ -13,7 +15,7 @@ const addLunchToStart = (array, string) => {
 };
 // supprimer un lunch de la fin du tableau
 const removeLastLunch = (array) => {
-  if(array.length !== 0) {
+  if(array.length) {
   let deletedItem = array.pop();
   console.log(`${deletedItem} removed from the end of the lunch menu.`);
   } else {
@@ -23,7 +25,7 @@ const removeLastLunch = (array) => {
 };
 // supprimer un lunch du début du tableau
 const removeFirstLunch = (array) => {
-  if(array.length !== 0) {
+  if(array.length) {
   let deletedItem = array.shift();
   console.log(`${deletedItem} removed from the start of the lunch menu.`);
   } else {
@@ -33,8 +35,8 @@ const removeFirstLunch = (array) => {
 };
 // random select a lunch
 const getRandomLunch = (array) => {
-  if(array.length !== 0) {
-    console.log(`Randomly selected lunch: ${array[math.floor(math.random() * array.length)]}`);
+  if(array.length) {
+    console.log(`Randomly selected lunch: ${array[Math.floor(Math.random() * array.length)]}`);
   } else {
     console.log("No lunches available.");
   }
@@ -42,8 +44,8 @@ const getRandomLunch = (array) => {
 
 // show lunchMenu
 const showLunchMenu = (array) => {
-  if(array.length !== 0) {
-    console.log(`Menu items: ${array}`);
+  if(array.length) {
+    console.log(`Menu items: ${array.join(", ")}`);
   } else {
     console.log("The menu is empty.");
   }
